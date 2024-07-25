@@ -11,8 +11,32 @@
         <h1>FRC Scouting Software</h1>
     </header>
     <main>
-        <!-- Main content will go here -->
+        <section id="main-menu">
+            <button id="show-form-btn">Enter Team and Robot Information</button>
+            <button id="view-results-btn">View Results</button>
+        </section>
+        <section id="data-entry" style="display: none;">
+            <h2>Enter Team and Robot Information</h2>
+            <form id="scouting-form">
+                <label for="team-name">Team Name:</label>
+                <input type="text" id="team-name" name="team-name" required>
+                
+                <label for="robot-capabilities">Robot Capabilities:</label>
+                <input type="text" id="robot-capabilities" name="robot-capabilities" required>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section id="results" style="display: none;">
+            <h2>Scouting Results</h2>
+            <div id="results-container"></div>
+        </section>
     </main>
     <script src="js/script.js"></script>
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js"></script>
+    <!-- Firebase Realtime Database -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js"></script>
+
 </body>
 </html>
